@@ -119,7 +119,6 @@ HTML5, Sass, JavaScript
 | Badge | 기술 | 설명 |
 | :---:| :---: | :---: |
 |![LocalStorage](https://img.shields.io/badge/LocalStorage-000000?style=flat-square&logo=LocalStorage&logoColor=white)| **LocalStorage** | **브라우저 내 데이터 저장 및 관리** |
-|![JSON](https://img.shields.io/badge/JSON-000000?style=flat-square&logo=JSON&logoColor=white)| **JSON** | **API 연동 및 데이터 구조화**  |
 
 ### 5. 개발 및 빌드 도구 (Development & Build Tools)
 
