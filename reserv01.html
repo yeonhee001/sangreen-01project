@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="icon" type="image/png" href="./img/index_favicon_01.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./img/index_favicon_02.png" sizes="16x16" />
+
+    <link href="./css/fullcalendar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reserv.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/reserveBar.js"></script>
+    <script defer src="./js/reserv.js"></script>
+</head>
+<body>
+    <main>
+        <!-- 상단 배너 -->
+        <div class="banner">
+            <p><img src="./img/reserv/reserv_banner_01.png" alt=""></p>
+            <div class="banner_text">
+                <h2>
+                    <span>R</span>
+                    <span>e</span>
+                    <span>s</span>
+                    <span>e</span>
+                    <span>r</span>
+                    <span>v</span>
+                    <span>a</span>
+                    <span>t</span>
+                    <span>i</span>
+                    <span>o</span>
+                    <span>n</span>
+                </h2>
+                <b>
+                    <span>산그린펜션 예약 현황 확인하기</span>
+                </b>
+            </div>
+        </div>
+        <div class="reserve_bar">
+            <ul>
+                <li class="active">
+                    <a href="./reserv01.html"><p>예약 현황</p></a>
+                </li>
+                <li><a href="./reserv02.html"><p>예약 하기</p></a></li>
+                <li><a href="./reserv03.html"><p>예약 확인 및 취소</p></a></li>
+            </ul>
+        </div>
+
+        <!-- 예약 현황 달력 -->
+        <div id="calendar01"></div>
+        <!-- 예약하기 바 -->
+        <div class="reserve_popupbar">
+            <div class="reserve_popupbar_flex">
+                <div class="left" style="display: flex;">
+                    <div class="reservation line">
+                        <h3>Reservation</h3>
+                        <div>
+                            <div class="room_name">
+                                <p>Room 101</p>
+                                <button class="room_select"></button>
+                                <div class="room_list">
+                                    <p>Room 101</p>
+                                    <p>Room 102</p>
+                                    <p>Room 103</p>
+                                    <p>Room 104</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkinout line">
+                        <h3>Check In/Out</h3>
+                        <p>2025. 01. 27 월 - 2025. 01. 28 화</p>
+                    </div>
+                    <div class="adult line">
+                        <h3>Adult</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="children line">
+                        <h3>Children</h3>
+                        <p>0</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="button">
+                        <a href="./reserv02.html">예약하기</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 인원선택 팝업창 -->
+            <div class="user">
+                <div class="user_top">
+                    <h3>인원 선택</h3>
+                    <button class="close"></button>
+                </div>
+                <div class="user_1">
+                    <div class="user_adult">
+                        <p>성인</p>
+                        <div class="button_num">
+                            <button class="minus_btn adult_btn"></button>
+                            <p>0</p>
+                            <button class="plus_btn adult_btn"></button>
+                        </div>
+                    </div>
+                    <div class="user_children">
+                        <span>
+                            <p>어린이</p>
+                            <p>⁕6세 이상</p>
+                        </span>
+                        <div class="button_num">
+                            <button class="minus_btn children_btn"></button>
+                            <p>0</p>
+                            <button class="plus_btn children_btn"></button>
+                        </div>
+                    </div>
+                    <div class="user_btn"><a href="#">확인</a></div>
+                </div>
+            </div>
+            <!-- 날짜선택 팝업창 -->
+            <div class="calender">
+                <div class="img">
+                    <img src="./img/reserv/reserv_video.gif" alt="">
+                </div>
+                <div class="calender_top">
+                    <h3>날짜 선택</h3>
+                    <button class="close"></button>
+                </div>
+                <div class="calender_flex">
+                    <div id="calender_left"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,127 @@
+// ========================================================================================
+// ==========================================another=======================================
+// ========================================================================================
+@media (min-width:1025px) and (max-width:1500px){
+    header{
+        .header{
+            padding: 25px 5%;
+        }
+    }
+    footer{
+        .footer{
+            width: 90%;
+        }
+    }    
+}
+
+// ========================================================================================
+// ==========================================ipad==========================================
+// ========================================================================================
+@media (min-width:768px) and (max-width:1024px){
+    header{
+        .header{
+            padding: 25px 50px;
+        }
+    }
+
+
+    footer{
+        .footer{
+            width: 90%;
+            padding: 80px 0;
+            .footer-rig{
+                .footer-menu{
+                    a{
+                        display: block;
+                        padding-bottom: 7px;
+                        text-align: right;
+                    }
+                }
+                .footer-icon{
+                    a{
+                        margin-left: 13px;
+                        img{width: 20px;}
+                    }
+                }
+            }
+        }
+    }    
+    
+}
+
+// ========================================================================================
+// ==========================================phone=========================================
+// ========================================================================================
+
+@media (max-width:767px){
+    header{
+        .header{
+            padding: 1.5% 5%;
+            .logo{
+                a{
+                    font-size: 20px;
+                }
+            }
+            .header-rig{
+                .bug{
+                    width: 25px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+    .nav-bg{
+        .nav-menu00{
+            transform: translateX(200%);
+            .nav-menu{
+                width: 100%;
+                padding: 0 0 0 50px;
+                background-color: rgba(243, 234, 214, 0.95);
+            }
+        }
+    }
+    .nav-menu00.active{
+        transform: translateX(0%);
+    }
+    header.active{
+        transform: translateY(-100%);
+        // background-color: #fff;
+    }
+
+
+    footer{
+        background-color: #E4D7BD;
+        .footer{
+            width: 90%;
+            display: block;
+            padding: 50px 0;
+            .footer-left{
+                h3{
+                    a{
+                        font-size: 20px;
+                    }
+                }
+                .footer-text1{
+                    margin: 20px 0 20px 0;
+                }
+            }
+            .footer-rig{
+                display: block;
+                .footer-menu{
+                    a{
+                        display: inline-block;
+                        margin: 20px 0;
+                        padding-left: 0;
+                        padding-right: 15px;
+                    }
+                }
+                .footer-icon{
+                    a{
+                        margin-left: 0;
+                        margin-right: 13px;
+                    }
+                }
+            }
+        }
+    } 
+}

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANGREEN</title>
+
+    <link rel="icon" type="image/png" href="./img/index_favicon_01.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./img/index_favicon_02.png" sizes="16x16" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="./css/fullcalendar.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/reserveBar.js"></script>
+    <script defer src="./js/index.js"></script>
+    
+</head>
+<body class="main">
+
+<div class="res_all">
+    <!-- 25 02 20
+    <div class="reserv">
+        <div class="reserv_left">
+            <div class="room">
+                <p>Reservation</p>
+                <p>Room 101</p>
+            </div>
+            <div class="check">
+                <p>Check In/Out</p>
+                <p>2025.01.27 월 - 2025.01.28 화</p>
+            </div>
+            <div class="adult">
+                <p>Adult</p>
+                <p>2</p>
+            </div>
+            <div class="children">
+                <p>Children</p>
+                <p>0</p>
+            </div>
+        </div>
+        <div class="reserv_rig">
+            <a href="./reserv02.html">예약하기</a>
+        </div>
+    </div> -->
+    
+    <!-- 예약하기 바 -->
+    <div class="reserve_popupbar">
+        <div class="reserve_popupbar_flex">
+            <div class="left">
+                <div class="reservation line">
+                    <h3>Reservation</h3>
+                    <div>
+                        <div class="room_name">
+                            <p>Room 101</p>
+                            <button class="room_select"></button>
+                            <div class="room_list">
+                                <p>Room 101</p>
+                                <p>Room 102</p>
+                                <p>Room 103</p>
+                                <p>Room 104</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkinout line">
+                    <h3>Check In/Out</h3>
+                    <p>2025. 01. 27 월 - 2025. 01. 28 화</p>
+                </div>
+                <div class="adult line">
+                    <h3>Adult</h3>
+                    <p>0</p>
+                </div>
+                <div class="children line">
+                    <h3>Children</h3>
+                    <p>0</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="button">
+                    <a href="./reserv02.html">예약하기</a>
+                </div>
+            </div>
+        </div>
+        <!-- 인원선택 팝업창 -->
+        <div class="user">
+            <div class="user_top">
+                <h3>인원 선택</h3>
+                <button class="close"></button>
+            </div>
+            <div class="user_1">
+                <div class="user_adult">
+                    <p>성인</p>
+                    <div class="button_num">
+                        <button class="minus_btn adult_btn"></button>
+                        <p>0</p>
+                        <button class="plus_btn adult_btn"></button>
+                    </div>
+                </div>
+                <div class="user_children">
+                    <span>
+                        <p>어린이</p>
+                        <p>⁕6세 이상</p>
+                    </span>
+                    <div class="button_num">
+                        <button class="minus_btn children_btn"></button>
+                        <p>0</p>
+                        <button class="plus_btn children_btn"></button>
+                    </div>
+                </div>
+                <div class="user_btn"><a href="#">확인</a></div>
+            </div>
+        </div>
+        <!-- 날짜선택 팝업창 -->
+        <div class="calender">
+            <div class="img">
+                <img src="./img/reserv/reserv_video.gif" alt="">
+            </div>
+            <div class="calender_top">
+                <h3>날짜 선택</h3>
+                <button class="close"></button>
+            </div>
+            <div class="calender_flex">
+                <div id="calender_left"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb_reserv">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<div class="wrap">
+    <main>
+        <div class="main_img">
+            <div class="swip">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/index_silde_01.png" alt="silde01">
+                            <div class="silde-title silde-title01">
+                                <div>
+                                    <span>T</span>
+                                    <span>h</span>
+                                    <span>e</span>
+                                </div>
+                                <div>
+                                    <span>D</span>
+                                    <span>a</span>
+                                    <span>y</span>
+                                    <span>&nbsp;</span>
+                                    <span>o</span>
+                                    <span>f</span>
+                                </div>
+                                <div>
+                                    <span>R</span>
+                                    <span>e</span>
+                                    <span>s</span>
+                                    <span>t</span>
+                                    <span>.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/index_silde_02.png" alt="silde02">
+                            <div class="silde-title silde-title02">
+                                <div>
+                                    <span>T</span>
+                                    <span>h</span>
+                                    <span>e</span>
+                                </div>
+                                <div>
+                                    <span>R</span>
+                                    <span>e</span>
+                                    <span>s</span>
+                                    <span>t</span>
+                                    <span>i</span>
+                                    <span>n</span>
+                                    <span>g</span>
+                                    <span>&nbsp;</span>
+                                    <span>p</span>
+                                    <span>l</span>
+                                    <span>a</span>
+                                    <span>c</span>
+                                    <span>e</span>
+                                </div>
+                                <div>
+                                    <span>f</span>
+                                    <span>o</span>
+                                    <span>r</span>
+                                    <span>&nbsp;</span>
+                                    <span>y</span>
+                                    <span>o</span>
+                                    <span>u</span>
+                                    <span>.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/index_silde_03.png" alt="silde03">
+                            <div class="silde-title silde-title03">
+                                <div>
+                                    <span>T</span>
+                                    <span>h</span>
+                                    <span>e</span>
+                                </div>
+                                <div>
+                                    <span>R</span>
+                                    <span>e</span>
+                                    <span>s</span>
+                                    <span>t</span>
+                                </div>
+                                <div>
+                                    <span>i</span>
+                                    <span>n</span>
+                                    <span>&nbsp;</span>
+                                    <span>n</span>
+                                    <span>a</span>
+                                    <span>t</span>
+                                    <span>u</span>
+                                    <span>r</span>
+                                    <span>e</span>
+                                    <span>.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/index_silde_04.png" alt="silde04">
+                            <div class="silde-title silde-title04">
+                                <div>
+                                    <span>T</span>
+                                    <span>h</span>
+                                    <span>e</span>
+                                </div>
+                                <div>
+                                    <span>D</span>
+                                    <span>a</span>
+                                    <span>y</span>
+                                    <span>&nbsp;</span>
+                                    <span>o</span>
+                                    <span>f</span>
+                                    <span>f</span>
+                                </div>
+                                <div>
+                                    <span>w</span>
+                                    <span>i</span>
+                                    <span>t</span>
+                                    <span>h</span>
+                                    <span>&nbsp;</span>
+                                    <span>n</span>
+                                    <span>a</span>
+                                    <span>t</span>
+                                    <span>u</span>
+                                    <span>r</span>
+                                    <span>e</span>
+                                    <span>.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="roomlist">
+            <div class="room_top">
+                <div class="text">
+                    <h3>Room List</h3>
+                    <p>지친 일상 속 자연을 느낄 수 있는 산그린펜션의 객실입니다.</p>
+                </div>
+                <div class="btn">
+                    <a href="./room.html">Detail ></a>
+                </div>
+            </div>
+            <ul class="room_img">
+                <li>
+                    <p>
+                        <img src="./img/index_room_01.png" alt="room01">
+                        <span>101</span>
+                    </p>
+                    <div class="img_hov">
+                        <div class="hov_text">
+                            <div class="hov_left">
+                                <span>Size</span>
+                                <span>Guests</span>
+                                <span>1F</span>
+                                <span>2F</span>
+                                <span>Supplies</span>
+                            </div>
+                            <span>
+                                125.4m² (38평) <br>
+                                최대 7명 <br>
+                                거실, 주방, 침실A(퀸2), 화장실, 바베큐장 <br>
+                                침실B(퀸1), 화장실 <br>
+                                에어컨, 소파, 정수기, 냉장고, TV, 전기밥솥, 인덕션, 테라스
+                            </span>
+                        </div>
+                        <b>￦129,000</b>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <img src="./img/index_room_02.png" alt="room02">
+                        <span>102</span>
+                    </p>
+                    <div class="img_hov">
+                        <div class="hov_text">
+                            <div class="hov_left">
+                                <span>Size</span>
+                                <span>Guests</span>
+                                <span>1F</span>
+                                <span>2F</span>
+                                <span>Supplies</span>
+                            </div>
+                            <span>
+                                125.4m² (38평) <br>
+                                최대 7명 <br>
+                                거실, 주방, 침실A(퀸2), 화장실, 바베큐장 <br>
+                                침실B(퀸1), 화장실 <br>
+                                에어컨, 소파, 정수기, 냉장고, TV, 전기밥솥, 인덕션, 테라스
+                            </span>
+                        </div>
+                        <b>￦129,000</b>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <img src="./img/index_room_03.png" alt="room03">
+                        <span>103</span>
+                    </p>
+                    <div class="img_hov">
+                        <div class="hov_text">
+                            <div class="hov_left">
+                                <span>Size</span>
+                                <span>Guests</span>
+                                <span>1F</span>
+                                
+                                <span>2F</span>
+                                <span>Supplies</span>
+                            </div>
+                            <span>
+                                141.9m² (43평) <br>
+                                최대 10명 <br>
+                                거실, 주방, 침실A(퀸2), 침실B(퀸1,싱글1), 화장실, 바베큐장 <br>
+                                침실C(퀸1), 화장실 <br>
+                                에어컨, 소파, 정수기, 냉장고, TV, 전기밥솥, 인덕션, 테라스
+                            </span>
+                        </div>
+                        <b>￦149,000</b>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <img src="./img/index_room_04.png" alt="room04">
+                        <span>104</span>
+                    </p>
+                    <div class="img_hov">
+                        <div class="hov_text">
+                            <div class="hov_left">
+                                <span>Size</span>
+                                <span>Guests</span>
+                                <span>1F</span>
+                                <span>2F</span>
+                                <span>Supplies</span>
+                            </div>
+                            <span>
+                                247.5m² (75평) <br>
+                                최대 12명 <br>
+                                거실, 주방, 침실A(퀸2), 침실B(퀸2), 화장실, 바베큐장 <br>
+                                침실C(퀸1), 화장실 <br>
+                                더블침대, 에어컨, 소파, 정수기, 냉장고, TV, 전기밥솥, 인덕션, 테라스 <br>
+                                ⁕ 수영장 2.5m x 2m
+                            </span>
+                        </div>
+                        <b>￦199,000</b>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <div class="section3">
+            <section class="special">
+                <div class="special_top">
+                    <div class="text">
+                        <h3>Special</h3>
+                        <p>산그린 펜션의 부대시설과 특장점을 확인해보세요.</p>
+                    </div>
+                    <div class="btn">
+                        <a href="./special.html">Detail ></a>
+                    </div>
+                </div>
+                <ul class="special_con">
+                    <li class="con1">
+                        <p class="con_img">
+                            <img src="./img/index_special_01.png" alt="special_01">
+                        </p>
+                        <div class="con1_text">
+                            <b>Main Swimming Pool</b>
+                            <p>
+                                깨끗하고 넓은 수영 공간에서 가족, 친구들과 함께 시원한 물놀이를 즐겨보세요. <br>
+                                투명카약을 수영장에서 즐기며 물 위를 떠다니는 특별한 경험을 만끽해보세요.
+                            </p>
+                            <p>
+                                * 오후 3시~ 오후 8시까지 하절기에만 운영합니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="con2">
+                        <p class="con_img">
+                            <img src="./img/index_special_02.png" alt="special_02">
+                        </p>
+                        <div class="con1_text">
+                            <b>Campfire</b>
+                            <p>
+                                고요한 밤, 타오르는 장작불을 바라보며 마음의 안정을 찾는 특별한 힐링! <br>
+                                가족, 친구, 연인과 함께 따뜻한 감성을 나누거나 혼자만의 사색에 잠겨보세요.
+                            </p>
+                            <p>
+                                * 불멍 1set (장작, 화로대) 30,000원 현장결제<br>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="con3">
+                        <p class="con_img">
+                            <img src="./img/index_special_03.png" alt="special_03">
+                        </p>
+                        <div class="con1_text">
+                            <b>Cafeteria</b>
+                            <p>
+                                커피 한잔의 여유를 즐길 수 있는 산그린 펜션의 매점입니다. <br>
+                                풀장 옆 간단한 먹거리를 구매할 수 있는 매점이 있습니다.
+                            </p>
+                            <p>
+                                * 오후 8시까지 운영
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section class="tour">
+            <div class="tour_slider">
+                <div class="tour_top">
+                    <div class="text">
+                        <h3>Tour Spot</h3>
+                        <p>펜션 근처 주요 관광지 정보를 확인해보세요.</p>
+                    </div>
+                </div>
+
+                <div class="tour_con00">
+                    <div class="tour_left_text">
+                        <div class="tour_content t_con0">
+                            <b class="tour_title">남이섬</b>
+                            <p class="tour_text">
+                                <img src="./img/index_logo_05.svg" alt="logo05">
+                                강원도 춘천시 남산면 남이섬길1</p>
+                            <p class="tour_text">
+                                <img src="./img/index_logo_06.svg" alt="logo06">
+                                펜션에서 약 34km, 차량 약 50분 거리</p>
+                            <p class="tour_tag">#문화예술의섬 #생명의섬 #남이섬 #나미나라공화국</p>
+                            <a href="./tour.html" class="tour_button">Read More</a>
+                        </div>
+                        <div class="tour_content t_con1">
+                            <b class="tour_title">청평호반</b>
+                            <p class="tour_text">
+                                <img src="./img/index_logo_05.svg" alt="logo05">
+                                경기도 가평군 설악면 유명로 1906-15</p>
+                            <p class="tour_text">
+                                <img src="./img/index_logo_06.svg" alt="logo06">
+                                펜션에서 약 29.4km 차량으로 36분 거리</p>
+                            <p class="tour_tag">#가평8경 #수상레포츠 #낚시 #드라이브코스</p>
+                            <a href="./tour.html" class="tour_button">Read More</a>
+                        </div>
+                        <div class="tour_content t_con2">
+                            <b class="tour_title">아침고요수목원</b>
+                            <p class="tour_text">
+                                <img src="./img/index_logo_05.svg" alt="logo05">
+                                경기도 가평군 상면 수목원로 432</p>
+                            <p class="tour_text">
+                                <img src="./img/index_logo_06.svg" alt="logo06">
+                                펜션에서 약 18.8km 차량 27분 거리</p>
+                            <p class="tour_tag">#별빛정원 #힐링체험 #오늘의축제 #연중무휴</p>
+                            <a href="./tour.html" class="tour_button">Read More</a>
+                        </div>
+                        <div class="tour_content t_con3">
+                            <b class="tour_title">운악산</b>
+                            <p class="tour_text">
+                                <img src="./img/index_logo_05.svg" alt="logo05">
+                                경기도 가평군 하면 운악청계로 589번길</p>
+                            <p class="tour_text">
+                                <img src="./img/index_logo_06.svg" alt="logo06">
+                                펜션에서 약 0.4km 차량으로 2분 거리</p>
+                            <p class="tour_tag">#출렁다리 #경기5악_바위산 #경기의_소금강</p>
+                            <a href="./tour.html" class="tour_button">Read More</a>
+                        </div>
+                    </div>
+                    <div class="swiper tour-mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./img/index_tour_01.png" alt="tour1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/index_tour_02.png" alt="tour2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/index_tour_03.png" alt="tour3">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./img/index_tour_04.png" alt="tour4">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>

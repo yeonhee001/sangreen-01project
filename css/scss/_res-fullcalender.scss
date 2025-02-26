@@ -1,0 +1,37 @@
+@media (min-width:1025px) and (max-width:1500px){
+    
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .fc .fc-toolbar.fc-header-toolbar {
+        margin-bottom: 80px;
+    }
+    .fc .fc-toolbar-title {
+        line-height: 57px;
+        font-size: 1.25rem;
+        margin: 0;
+    }
+    .fc .fc-col-header-cell-cushion {
+        font-size: 1rem;
+        display: inline-block;
+        padding: 2px 4px;
+    }
+    .fc .fc-daygrid-day-number {
+        font-size: 1.2rem;
+        position: relative;
+        z-index: 4;
+        padding: 4px;
+    }
+    .fixed-text{
+        font-size: 12px !important; 
+    }
+}
+
+@media (max-width:480px){
+    #calendar01{
+        display: none;
+    }
+}
+
+
+

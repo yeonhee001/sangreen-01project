@@ -1,0 +1,693 @@
+@import '_common';
+
+
+.wrap{
+    position:fixed;
+    left:0; top:0; 
+    width:100%;
+    // transition: .5s ease-out;
+}
+.swiper-pagination-bullet{
+    background-color: #ECEBC2;
+}
+.swiper-pagination-bullet-active{
+    background-color: #999F54;
+}
+
+// 25 02 20
+// .reserv{
+//     position: fixed;
+//     right: 0; bottom: 0;
+//     z-index: 2;
+
+//     display: flex;
+//     justify-content: end;
+//     align-items: center;
+//     .reserv_left{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         background-color: white;
+//         height: 100px;
+//         div{
+//             display: inline-block;
+//             border-right: 1px solid #555;
+//             padding: 0 30px;
+//             p:nth-of-type(1){
+//                 font-size: 14px;
+//                 color: #555;
+//             }
+//             p:nth-of-type(2){
+//                 font-size: 20px;
+//                 font-family: 'NanumSquareBold';
+//                 color: #333;
+//             }
+//         }
+//         .adult{text-align: center;}
+//         .children{text-align: center; border: none;}
+//     }
+//     .reserv_rig{
+//         height: 100px;
+//         a{
+//             background-color: #F3EAD6;
+//             padding: 32px 82px;
+//             font-size: 24px;
+//             font-family: 'NanumSquareBold';
+//             display: block;
+//         }
+//     }
+// }
+.mb_reserv{display: none;}
+
+
+//팝업창 top 스타일
+.user_top, .calender_top, .reserv03_check_top, .room_select_top{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 5px 28px ;
+    background-color: #999F54;
+    border-radius: 16px 16px 0 0 ;
+    text-align: center;
+    h3{
+        color: #FFF8EB;
+        font-weight: normal;
+    }
+}
+//팝업창 닫기 버튼
+.close{
+    width: 12px; height: 12px;
+    background : url(../img/reserv/reserv_X_01.svg) 0 0 / cover no-repeat;
+}
+.reserve_popupbar{
+    position: relative;
+    position: fixed;
+    right: 0; bottom: 0;
+    z-index: 2;
+    // width: 1400px;
+    margin: 0 auto;
+    .reserve_popupbar_flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // height: 118px;
+        .left{
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            height: 100px;
+            //룸 선택
+            .room_name{
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                align-items: center;
+            }
+            .room_list{
+                display: none;
+                position: absolute;
+                background-color: white;
+                top: -225px;
+                left: -12px;
+                z-index: 99;
+                padding: 10px;
+                p{
+                    padding: 5px 0;
+                    font-weight: normal !important;}
+            }
+            .room_list.active{display: block;}
+            .room_name>h3{grid-column: 1 / 3;}
+            .room_name>p{grid-column: 1 / 2;}
+            .room_name>.room_select{
+                grid-column: 2 / 3;
+                margin-left: 15px;
+            }
+            .line{
+                border-right: 1px solid #6f6f6f;
+                padding: 0 78px;
+                h3{ 
+                    font-size: 14px;
+                    font-weight: normal;
+                }
+                p{
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                }
+                .room_select{
+                    width: 11px; height: 6px;
+                    background: url(../img/reserv/reserv_drop.svg) 0 0 / cover no-repeat;
+                }
+            }
+            .adult, .children{
+                text-align: center;
+            }
+            .children{
+                border: none;
+            }
+        }
+        .right{
+            height: 100px;
+            a{
+                display: block;
+                font-size: 1.5rem;
+                padding: 32px 91px;
+                font-weight: bold;
+                color: #333;
+                background-color: #F3EAD6;
+            }
+        }
+    }
+    //인원선택
+    .user{
+        display: none;
+        position: absolute;
+        left: 698px;
+        bottom: 108px;
+        width: 250px;
+        z-index: 1;
+        h3::before{
+            content: url(../img/reserv/reserv_uesr_01.svg);
+            display: inline-block;
+            font-size: 0px;
+            vertical-align: middle;
+            margin-right: 36px;
+        }
+        .plus_btn{
+            width: 26px; height: 26px;
+            background : url(../img/reserv/reserv_icoPlusBtn.svg) 0 0 / cover no-repeat;
+        }   
+        .minus_btn{
+            width: 26px; height: 26px;
+            background : url(../img/reserv/reserv_icoMinusBtn.svg) 0 0 / cover no-repeat;
+        }
+        .user_1{
+            border:1px solid #999F54;
+            border-radius: 0 0 16px 16px;
+            background-color: #fff;
+            padding: 20px 33px;
+            .user_btn{
+                text-align: center;
+                a{
+                    background-color: #ECEBC2;
+                    border-radius: 20px;
+                    padding: 13px 27px;
+                }
+            }
+        }
+        .user_adult, .user_children{
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            p:nth-of-type(2){
+                font-size: 0.7rem;
+            }
+        }
+        .button_num{
+            width: 90px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .user.active{
+        display: block;
+    }
+    //날짜선택
+    .calender{
+        display: none;
+        position: absolute;
+        left: 19.6%;
+        bottom: 109px;
+        width: 500px;
+        z-index: 1;
+        > div{
+            width: 100%;
+            img{
+                position: absolute;
+                top: 42.8%;
+                left: 29.8%;
+                width: 39.9%;
+            }
+        }
+        h3::before{
+            content: url(../img/reserv/reserv_date_01.svg);
+            display: inline-block;
+            font-size: 0px;
+            vertical-align: middle;
+            margin-right: 170px;
+        }
+        .calender_flex{
+            border:1px solid #999F54;
+            border-radius: 0 0 16px 16px;
+            background-color: #fff;
+            padding: 20px 33px;
+        }
+    }
+    .calender.active{
+        display: block;
+    }
+}
+
+
+
+
+main{
+    .main_img{
+        position: relative;
+        .swip{
+            height: 100vh;
+            .mySwiper{
+                width: 100%;
+                height: 100%;
+                .swiper-wrapper{
+                    .swiper-slide{
+                        position: relative;
+                        &.swiper-slide-active span{
+                            animation: blink 0.5s 1 alternate forwards;
+                        }
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                        .silde-title01{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            font-size: 80px;
+                            font-family: "Baloo Bhaijaan 2";
+                            font-weight: bold;
+                            color: white;
+                            div{
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                span{
+                                    opacity: 0;
+                                }
+                                
+                                @keyframes blink {
+                                    0% { opacity: 0; }
+                                    100% { opacity: 1; }
+                                }
+                            }
+                            div:nth-of-type(1){
+                                position: absolute;
+                                left: 50%;
+                                top: 40%;
+                                transform: translate(-58%, -50%);
+                            }
+                            div:nth-of-type(2){
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            div:nth-of-type(3){
+                                position: absolute;
+                                left: 50%;
+                                top: 60%;
+                                transform: translate(-53%, -50%);
+                            }
+                        }
+                        .silde-title02{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            font-size: 80px;
+                            font-family: "Baloo Bhaijaan 2";
+                            font-weight: bold;
+                            color: white;
+                            div{
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                span{
+                                    opacity: 0;
+                                }
+                                
+                            }
+                            div:nth-of-type(1){
+                                position: absolute;
+                                left: 50%;
+                                top: 40%;
+                                transform: translate(-59%, -50%);
+                            }
+                            div:nth-of-type(2){
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            div:nth-of-type(3){
+                                position: absolute;
+                                left: 50%;
+                                top: 60%;
+                                transform: translate(-44%, -50%);
+                            }
+                        }
+                        .silde-title03{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            font-size: 80px;
+                            font-family: "Baloo Bhaijaan 2";
+                            font-weight: bold;
+                            color: white;
+                            div{
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                span{
+                                    opacity: 0;
+                                }
+                                
+                            }
+                            div:nth-of-type(1){
+                                position: absolute;
+                                left: 50%;
+                                top: 40%;
+                                transform: translate(-54%, -50%);
+                            }
+                            div:nth-of-type(2){
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            div:nth-of-type(3){
+                                position: absolute;
+                                left: 50%;
+                                top: 60%;
+                                transform: translate(-48%, -50%);
+                            }
+                        }
+                        .silde-title04{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            font-size: 80px;
+                            font-family: "Baloo Bhaijaan 2";
+                            font-weight: bold;
+                            color: white;
+                            div{
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                span{
+                                    opacity: 0;
+                                }
+                            }
+                            div:nth-of-type(1){
+                                position: absolute;
+                                left: 50%;
+                                top: 40%;
+                                transform: translate(-53.5%, -50%);
+                            }
+                            div:nth-of-type(2){
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            div:nth-of-type(3){
+                                position: absolute;
+                                left: 50%;
+                                top: 60%;
+                                transform: translate(-40%, -50%);
+                            }
+                        }
+                    }    
+                }
+            }
+        }
+        
+    }
+    .roomlist{
+        width: 1400px;
+        margin: 200px auto 100px;
+        .room_top{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 50px;
+            .text{
+                h3{
+                    font-family: 'HakgyoansimDunggeunmisoTTF-B';
+                    font-size: 24px;
+                    color: #A66D45;
+                    margin-bottom: 7px;
+                }
+                p{
+                    line-height: 24px;
+                    letter-spacing: -2%;
+                }
+            }
+            .btn{
+                a{
+                    font-family: 'HakgyoansimDunggeunmisoTTF-R';
+                    font-size: 16px;
+                    color: #A66D45;
+                }
+            }
+        }
+        .room_img{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            li{
+                position: relative;
+                overflow: hidden;
+                transition: 0.8s;
+                width:350px;
+                p{
+                    position: relative;
+                    filter: brightness(1);
+                    img{
+                        width: 350px;
+                    }
+                    span:nth-of-type(1){
+                        position: absolute;
+                        left: 20px; top: 25px;
+                        font-family: 'HakgyoansimDunggeunmisoTTF-B';
+                        font-size: 20px;
+                        color: #fff;
+                        text-shadow: 5px 5px 10px rgba(125, 125, 125, 0.20);
+                    }
+                }
+                p:hover{
+                    cursor: pointer;
+                    filter: brightness(0.75);
+                }
+                >div{
+                    position: absolute;
+                    z-index: 2;
+                    left: 350px; top: 0;
+                    width: 700px; height: 455px;
+                    background-color: rgba(255, 248, 235, 0.95);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 0 0 0 63px;
+                    .hov_text{
+                        width: 100%;
+                        display: flex;
+                        gap: 12px;
+                        span{
+                            display: inline-block;
+                            line-height: 27px;
+                            color: #333;
+                        }
+                        .hov_left>span{
+                            display: block;
+                        }
+                    }
+                    b{
+                        display: block;
+                        margin-top: 30px;
+                        font-family: 'NanumSquareBold';
+                        font-size: 30px;
+                        color: #555;
+                    }
+                }
+            }
+            li.active{
+                // flex-grow: 10;
+                flex-shrink: 0;
+                width: 1050px;
+            }
+            
+        }
+    }
+    .section3{
+        background-color: #FFF8EB;
+        height:400vh;
+        .special{
+            width: 1400px;
+            height: 100vh;
+            margin: 0 auto;
+            padding: 3% 0;
+            .special_top{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 50px;
+                .text{
+                    h3{font-family: 'HakgyoansimDunggeunmisoTTF-B';
+                        font-size: 24px;
+                        color: #A66D45;
+                        margin-bottom: 7px;
+                    }
+                    p{
+                        line-height: 24px;
+                        letter-spacing: -2%;
+                    }
+                }
+                .btn{
+                    a{
+                        font-family: 'HakgyoansimDunggeunmisoTTF-R';
+                        font-size: 16px;
+                        color: #A66D45;
+                    }
+                }
+            }
+            .special_con{
+                position: relative;
+                width: 100%;
+                li{
+                    position: absolute;
+                    left: 0; top: 0;
+                    width: 100%;
+                    &:nth-of-type(1){z-index: 3;}
+                    &:nth-of-type(2){z-index: 2;}
+                    &:nth-of-type(3){z-index: 1;}
+                    .con1_text{
+                        opacity: 0;
+                    }
+                    .con_img{
+                        width: 1400px;
+                        overflow: hidden;
+                        // opacity: 0;
+                        // position: absolute;
+                        // left: 0; top: 0;
+                        img{
+                            width: 100%;
+                            max-height: 50vh;
+                            object-fit: cover;
+                        }
+                    }
+                    div{
+                        width: 1400px;
+                        opacity: 0;
+                        // position: absolute;
+                        // right: 0; bottom: 0;
+                        b{
+                            display: block;
+                            margin: 50px 0 23px;
+                            font-family: 'HakgyoansimDunggeunmisoTTF-B';
+                            font-size: 20px;
+                            color: #566418;
+                        }
+                        p{
+                            line-height: 24px;
+                            letter-spacing: -2%;
+                        }
+                        p:nth-of-type(2){
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tour{
+        width: 1400px;
+        // height: 100vh;
+        margin: 0 auto;
+        padding: 125px 0;
+        .tour_slider{
+            .tour_top{
+                position: relative;
+                .text{
+                    position: absolute;
+                    left: 0; top: 0;
+                    h3{
+                        font-family: 'HakgyoansimDunggeunmisoTTF-B';
+                        font-size: 24px;
+                        color: #A66D45;
+                        margin-bottom: 7px;
+                    }
+                    p{
+                        line-height: 24px;
+                        letter-spacing: -2%;
+                    }
+                }
+            }
+            .tour_con00{
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+                .tour_left_text{
+                    width: 45%;
+                    position: relative;
+                    .tour_content{
+                        position: absolute;
+                        left: 0; bottom: 0;
+                        opacity: 0;
+                        transform: translateY(50%);
+                        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+                        .tour_title{
+                            display: block;
+                            font-family: 'NanumSquareBold';
+                            font-size: 20px;
+                            color: #566418;
+                            margin-bottom: 20px;
+                        }
+                        .tour_text{
+                            line-height: 28px;
+                            img{width: 12px;}
+                        }
+                        .tour_tag{margin: 15px 0 20px;}
+                        .tour_button{
+                            display: inline-block;
+                            font-family: 'NanumSquareBold';
+                            font-size: 20px;
+                            color: #333;
+                            padding: 18px 40px;
+                            background-color: #ECEBC2;
+                        }
+                    }
+                    .t_con0{
+                        opacity: 1;
+                        transform: translateY(0);
+                        display: block;
+                    }
+                }
+                .tour-mySwiper{
+                    width: 55%;
+                    .swiper-wrapper{
+                        .swiper-slide{
+                            // width: 768px;
+                            height: 593px;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@import "./res-index";

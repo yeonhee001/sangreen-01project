@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+
+    <link rel="icon" type="image/png" href="./img/index_favicon_01.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./img/index_favicon_02.png" sizes="16x16" />
+    <link rel="stylesheet" href="./css/reserv.css">
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/reserveBar.js"></script>
+    <script defer src="./js/reserv.js"></script>
+</head>
+<body>
+    <main>
+        <!-- 상단 배너 -->
+        <div class="banner">
+            <p><img src="./img/reserv/reserv_banner_01.png" alt=""></p>
+            <div class="banner_text">
+                <h2>
+                    <span>R</span>
+                    <span>e</span>
+                    <span>s</span>
+                    <span>e</span>
+                    <span>r</span>
+                    <span>v</span>
+                    <span>a</span>
+                    <span>t</span>
+                    <span>i</span>
+                    <span>o</span>
+                    <span>n</span>
+                </h2>
+                <b>
+                    <span>산그린펜션 예약확인 및 취소</span>
+                </b>
+            </div>
+        </div>
+        <div class="reserve_bar">
+            <ul>
+                <li class="active">
+                    <a href="./reserv01.html"><p>예약 현황</p></a>
+                </li>
+                <li class="active"><a href="./reserv02.html"><p>예약 하기</p></a></li>
+                <li class="active"><a href="./reserv03.html"><p>예약 확인 및 취소</p></a></li>
+            </ul>
+        </div>
+        
+        <!-- 예약확인 및 취소 -->
+        <div class="reserv03">
+            <div class="reserv03_inputbox">
+                <form action="#">
+                    <label for="name2" class="name box_relative">
+                        <input id="name2" class="input_icon" type="text" placeholder="이름"  lang="ko" inputmode="text">
+                        <span class="null">⁕ 필수 정보입니다.</span>
+                    </label>
+                    <label for="tel2" class="tel box_relative">
+                        <input id="tel2" class="input_icon" type="tel" placeholder=" ' - ' 없이 전화번호를 입력해 주세요." maxlength="11">
+                        <span class="null">⁕ 필수 정보입니다.</span>
+                    </label>
+                    <label for="email2" class="email box_relative">
+                        <input id="eamil2" class="input_icon" type="email" placeholder="이메일">
+                    </label>
+                </form>
+                <a href="#">조회하기</a>
+                <!-- 조회하기 팝업창 -->
+                <div class="reserv03_check">
+                    <div class="reserv03_check_top">
+                        <h3>예약확인 및 취소</h3>
+                        <button class="close"></button>
+                    </div>
+                    <div class="room_check03">
+                        <div class="room_check">
+                            <label class="checkbox03" for="checkbox">
+                                <div class="room_name03">
+                                    <input id="checkbox" type="checkbox">
+                                    <h2>Room 101</h2>
+                                </div>
+                                <div class="room_num">
+                                    <ul>
+                                        <li>
+                                            <p>숙박 기간</p>
+                                            <p>2025.01.24 금 - 2025.01.26 일</p>
+                                        </li>
+                                        <li>
+                                            <p>예약자명</p>
+                                            <p>김똥개</p>
+                                        </li>
+                                        <li>
+                                            <p>전화 번호</p>
+                                            <p>010-1234-5678</p>
+                                        </li>
+                                        <li>
+                                            <p>인원 수</p>
+                                            <p>성인 2명</p>
+                                        </li>
+                                        <li>
+                                            <p>이메일</p>
+                                            <p>aaa@naver.com</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="reserv03_btn">
+                            <a href="#">예약 취소</a>
+                            <a href="#">예약 확인</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,165 @@
+@import "_common";
+
+// ✅ 텍스트 애니메이션 관련 SCSS 수정
+*{word-break: keep-all;}
+
+.banner{
+    width: 100%;
+    margin: 0 auto 150px;
+    position: relative;
+    color: #FFFFFF;
+    text-align: center;
+    p{
+        img {
+        width: 100%; height: 100%;
+        }
+    }
+    .banner_text{
+        text-align: center;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        h2{
+            display: flex;
+            justify-content: center;
+            font-family: 'HakgyoansimDunggeunmisoTTF-B';
+            font-size: 2.8rem;
+            span{
+                opacity: 0;
+                animation: blink 0.5s 1 alternate forwards;
+            }
+
+            @keyframes blink {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+        }
+        b{
+            font-weight: normal;
+            span{
+                opacity: 0;
+                animation: blink 2s 1 alternate forwards;
+            }
+        }
+    }
+}
+
+.tour {
+    width:1400px;
+    margin: 200px auto;
+    
+
+    ul {
+        list-style: none; // ✅ 리스트 스타일 제거
+        padding: 0;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin: 150px 0;
+            opacity: 0;
+            transform: translateY(30px); // ✅ 아래에서 시작
+            transition: opacity 1s ease-out, transform 1s ease-out;
+
+            &.show{
+                opacity: 1;
+                transform: translateY(0px); // ✅ 아래에서 시작
+            }
+          
+            .swiper {
+                flex-shrink: 0;
+                width: 47%;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                img {
+                    width: 100%;
+                }
+            }
+            .swiper-pagination-bullet{background-color: #999f54;}
+
+            .info {
+                width: 47%;
+                font-family:'NanumSquare';
+                                                                ;
+            }
+            .title {
+                font-size: 24px;
+                font-weight:bold ;
+            
+                color: #999f54;
+                margin-bottom:50px;
+                text-align: left;
+            }
+
+            .txt {
+                font-size: 16px;
+                line-height:24px;
+                color: #333;
+                text-align: left;
+            }
+
+        }
+
+            &.show .info {
+                opacity: 1; // ✅ show 클래스 추가 시 보이도록 설정
+                transform: translateY(0); // ✅ 위로 올라오면서 나타남
+            }
+        }
+    }
+
+    .m-title{
+        font-family:HakgyoansimDunggeunmisoTTF-B;
+        font-size: 24px;
+        text-align: left;
+        color:#A66D45;
+        }
+
+    .map {
+        margin-top: 50px;
+    
+        #imageBox {
+            position: relative;
+            margin: 0 auto;
+            width: 80%;
+            img {
+                width: 100%;
+                display: none;
+                text-align: center;
+            }
+            img:first-child {
+                display: block;
+            }
+        }
+    
+      
+    }
+    
+    .btn-group {
+        margin-top: 50px;
+        margin-bottom: 150px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        button {
+            padding: 10px 20px;
+            font-size: 24px;
+            background-color: #999F54;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 260px;
+            height: 100px;
+            text-align: center;
+            font-family: 'NanumSquare';
+        }
+
+        button:hover,
+        button.active {
+            background-color: #566418;
+        }
+    }
+
+
+@import "_res-tour.scss";
