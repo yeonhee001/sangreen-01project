@@ -40,7 +40,7 @@ HTML5, Sass, JavaScript
 
 | 이름 | 직무 | 담당 페이지 | 해당 |
 | :---:| :---: | :---: | :---: |
-| 소연희 | 총괄 팀장 | index.html, header.html, footer.html | |
+| 소연희 | 총괄 팀장 | index.html, header.html, footer.html | ✔ |
 | 안지현 | 디자인 팀장 | reserv01.html, reserv02.html, reserv03.html | |
 | 박형주 | 기획 팀장 | intro.html, room.html | |
 | 이용욱 | 개발 팀장 | special.html, tour.html | |
