@@ -111,7 +111,7 @@ HTML5, Sass, JavaScript
 
 | Badge | 라이브러리 | 설명 |
 | :---:| :---: | :---: |
-|![FullCalendar](https://img.shields.io/badge/FullCalendar-6332F6?style=flat-square&logo=FullCalendar&logoColor=white)| **FullCalendar** | **캘린더 기능 구현** |
+|![FullCalendar](https://img.shields.io/badge/FullCalendar-ffb500?style=flat-square&logo=FullCalendar&logoColor=white)| **FullCalendar** | **캘린더 기능 구현** |
 |![Swiper](https://img.shields.io/badge/Swiper-6332F6?style=flat-square&logo=Swiper&logoColor=white)| **Swiper.js** | **이미지 슬라이드 및 캐러셀 효과** |
 
 ### 4. 데이터 처리 (Data Handling & Storage)
