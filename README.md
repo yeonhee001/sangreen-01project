@@ -1,10 +1,10 @@
 ## ✨ 소개
 저희는 사이트 배포 후 관리가 필요한 기존 사이트를 선정하여,<br>
 고객 확보를 위한 트렌디한 디자인과<br>
-사용자를 고려한 편리한 기능을 중심으로 한 리뉴얼 프로젝트 입니다
+사용자를 고려한 편리한 기능을 중심으로 한 리뉴얼 프로젝트입니다
 
 ## 🔗 배포 URL
-https://chally7.github.io/sangreen/
+https://yeonhee001.github.io/sangreen-01project/
 
 ## 📑 요약
 
