@@ -1,4 +1,4 @@
-<img src="https://github.com/user-attachments/assets/3afb18b8-38b2-4e7d-ab74-084a49c4bd12" width="1000px"/>
+<img src="https://github.com/user-attachments/assets/9ea6650a-182a-4442-b35c-a3f1fb3be19f" width="1000px"/>
 
 
 ## ✨ 소개
