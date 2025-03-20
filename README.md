@@ -1,3 +1,6 @@
+<img src="https://github.com/user-attachments/assets/3afb18b8-38b2-4e7d-ab74-084a49c4bd12" width="1000px"/>
+
+
 ## ✨ 소개
 저희는 사이트 배포 후 관리가 필요한 기존 사이트를 선정하여,<br>
 고객 확보를 위한 트렌디한 디자인과<br>
