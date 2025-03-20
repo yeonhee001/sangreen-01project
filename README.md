@@ -158,8 +158,9 @@ HTML5, Sass, JavaScript
 
  4. [Special 섹션] 예약하기 바를 fixed 상태로 두었는데 해당 섹션의 스크롤이벤트로 fixed 상태가 적용되지 않는 이슈 발생
 
-    ⇒ **해결방법**:  않은 경우) 으로 필터링<br>
-        필터링된 데이터를 다시 Local Storage에 저장
+    *body에 translateY값을 주어 스크롤이 발생되어 예약하기 바 fixed가 적용이 안되는 상황
+    
+    ⇒ **해결방법**:   translateY값을 body가 아닌 wrap클래스명을 지정하여 이곳에 값을 적용시키고, wrap클래스 태그 바깥으로 예약하기 바 관련 태그를 꺼내어 fixed가 적용되게 처리함
 <br>
 
  5. [TourSpot 섹션] 메인 페이지에서 swiper silde를 두번 사용하는 이슈 발생
