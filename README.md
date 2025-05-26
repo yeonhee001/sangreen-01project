@@ -72,7 +72,7 @@ HTML5, Sass, JavaScript
 📂SANGREEN
 ┣ 📂css
 ┃  ┗📂scss
-┣ 📂img     # 각 페이지 내 이미지 폴더(index부분은 img폴더에 추가)
+┣ 📂img             # 각 페이지 내 이미지 폴더(index부분은 img폴더에 추가)
 ┃  ┣ 📂intro   
 ┃  ┣ 📂reserv
 ┃  ┣ 📂room
@@ -136,15 +136,15 @@ HTML5, Sass, JavaScript
 
 | 문서종류 | 파일명 | 설명 |
 | :---:| :---: | :---: |
-| 기획서 |  | 프로젝트 목적, 타겟, 주요 기능 등 기획 개요 |
-| 화면설계 |  | 전체 페이지의 UI/UX 흐름 및 구조 |
-| 디자인 |  | 화면설계를 바탕으로 한 디자인 작업물 |
-| 발표자료 |  | 팀 프로젝트 발표용 자료 |
+| 기획서 | [기획서.pdf](https://github.com/yeonhee001/sangreen-01project/blob/main/1%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_A%ED%8C%80_01%EA%B8%B0%ED%9A%8D.pdf) | 프로젝트 목적, 타겟, 주요 기능 등 기획 개요 |
+| 화면설계 | [화면설계.pdf](https://github.com/yeonhee001/sangreen-01project/blob/main/1%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_A%ED%8C%80_02%ED%99%94%EB%A9%B4%EC%84%A4%EA%B3%84(%EC%8A%A4%ED%86%A0%EB%A6%AC%EB%B3%B4%EB%93%9C).pdf) | 주요 페이지의 화면 구성, 사용자 흐름 등 와이어프레임 기반 설계 자료 |
+| 디자인 | [디자인.pdf](https://github.com/yeonhee001/sangreen-01project/blob/main/1%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_A%ED%8C%80_03%EB%94%94%EC%9E%90%EC%9D%B8.pdf) | Figma로 작업한 디자인 시안. 색상, 폰트, UI 요소 등 자료 |
+| 발표자료 | [발표자료.pdf](https://github.com/yeonhee001/sangreen-01project/blob/main/1%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_A%ED%8C%80_%EC%82%B0%EA%B7%B8%EB%A6%B0%ED%8E%9C%EC%85%98_%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.pdf) | 팀 프로젝트 발표용 슬라이드 자료 |
 | 인터페이스 기능 보고서 |  | 구현된 기능별 상세 설명 |
-| 완료 보고서 |  | 프로젝트 진행 결과, 회고 등 최종 보고 |
+| 완료 보고서 | [완료보고서.hwp](https://github.com/yeonhee001/sangreen-01project/blob/main/1%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_A%ED%8C%80_%EC%99%84%EB%A3%8C%EB%B3%B4%EA%B3%A0%EC%84%9C.hwp) | 프로젝트 진행 결과 요약 등 최종 보고 |
 
 
-## 💥 트러블 슈팅
+## 📝 소연희의 개발 상세
 
 ### 📌 header.html
 
