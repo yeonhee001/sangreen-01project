@@ -144,8 +144,7 @@ HTML5, Sass, JavaScript
 | 완료 보고서 | [완료보고서.hwp](https://github.com/yeonhee001/sangreen-01project/blob/main/1%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_A%ED%8C%80_%EC%99%84%EB%A3%8C%EB%B3%B4%EA%B3%A0%EC%84%9C.hwp) | 프로젝트 진행 결과 요약 등 최종 보고 |
 
 
-## 📝 소연희의 개발 상세
-
+## 📝 트러블이슈
 ### 📌 header.html
 
  1. 버거 메뉴 클릭 후 스크롤시 하단에 여백이 생기는 이슈 발생
