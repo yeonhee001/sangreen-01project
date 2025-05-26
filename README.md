@@ -6,8 +6,9 @@
 고객 확보를 위한 트렌디한 디자인과<br>
 사용자를 고려한 편리한 기능을 중심으로 한 리뉴얼 프로젝트입니다
 
-## 🔗 배포 URL
-https://yeonhee001.github.io/sangreen-01project/
+## 🔗 URL
+기존: https://xn--2i0b75ttsfjtap22e.com/ <br/>
+리뉴얼: https://yeonhee001.github.io/sangreen-01project/
 
 ## 📑 요약
 
@@ -129,6 +130,19 @@ HTML5, Sass, JavaScript
 | :---:| :---: | :---: |
 |![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)| **버전 관리** | GitHub |
 |![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white) | **디자인 & UI/UX** | Figma (화면 설계 및 프로토타이핑) |
+
+
+## 📚 프로젝트 문서 자료
+
+| 문서종류 | 파일명 | 설명 |
+| :---:| :---: | :---: |
+| 기획서 |  | 프로젝트 목적, 타겟, 주요 기능 등 기획 개요 |
+| 화면설계 |  | 전체 페이지의 UI/UX 흐름 및 구조 |
+| 디자인 |  | 화면설계를 바탕으로 한 디자인 작업물 |
+| 발표자료 |  | 팀 프로젝트 발표용 자료 |
+| 인터페이스 기능 보고서 |  | 구현된 기능별 상세 설명 |
+| 완료 보고서 |  | 프로젝트 진행 결과, 회고 등 최종 보고 |
+
 
 ## 💥 트러블 슈팅
 
