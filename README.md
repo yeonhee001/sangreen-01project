@@ -1,5 +1,4 @@
-<img src="https://github.com/user-attachments/assets/9ea6650a-182a-4442-b35c-a3f1fb3be19f" width="1000px"/>
-
+<img src="https://github.com/user-attachments/assets/4f0d8f92-3a57-4273-85c9-ed2cf3d6c746" width="1000px"/>
 
 ## ✨ 소개
 저희는 사이트 배포 후 관리가 필요한 기존 사이트를 선정하여,<br>
@@ -33,9 +32,9 @@ HTML5, Sass, JavaScript
 
 ## 📆 기간 및 인원
 
-  * 총 작업 기간 : 15일
+  * 2025.02.03-2025.02.24 평일 기준 총 16일
     * 기초 데이터 수집 및 화면 설계 기간 : 5일
-    * 개발 및 테스트 기간 : 10일
+    * 개발 및 테스트 기간 : 11일
    
   * 팀원 : 4명
     
